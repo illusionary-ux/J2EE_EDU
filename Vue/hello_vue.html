@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Hello Vue</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    </head>
+
+    <body>
+        <div id = "test">
+            <h1>{{message}}</h1>
+            <h2>{{add}}</h2>
+            <a :href="url">baidu</a>
+
+            <button v-on:click="click">click</button>
+        </div>
+        <script>
+            const {createApp} = Vue;
+            //解构、开箱
+
+            const vm = createApp(
+
+                {
+                    data(){
+                        return {
+                            message:'Hello',
+                            a:1,
+                            b:2,
+                            url:'https://www.baidu.com'
+                        };
+                    },
+                    computed: {
+                        add() {
+                            return this.a + this.b;
+                        }
+                    },
+                    methods: {
+                        click() {
+                            alert("Hello Vue!");
+                        }
+                    },
+                }
+            )
+
+            vm.mount("#test")
+        </script>
+    </body>
+</html>
+
+
