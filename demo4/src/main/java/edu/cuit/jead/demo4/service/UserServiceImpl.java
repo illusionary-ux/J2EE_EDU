@@ -1,14 +1,8 @@
 package edu.cuit.jead.demo4.service;
 
-import edu.cuit.jead.demo4.util.FileUploader;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import edu.cuit.jead.demo4.entity.User;
+import edu.cuit.jead.demo4.mapper.UserMapper;
 
-@Service
-public class UserServiceImpl implements UserService {
-
-    @Autowired
-    private FileUploader fileUploader;
-
-    
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 }
