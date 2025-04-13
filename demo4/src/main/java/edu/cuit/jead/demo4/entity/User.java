@@ -4,8 +4,12 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class User {
+public class User implements Serializable {
+
+
     @TableId(type = IdType.AUTO) // 如果主键是自增的，需要指定
     private Long uid;
     private String name; // 用户姓名

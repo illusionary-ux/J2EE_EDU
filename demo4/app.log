@@ -1,0 +1,61 @@
+2025-04-13 00:19:48.600  INFO 30804 --- [main] edu.cuit.jead.demo4.Demo4Application     : Starting Demo4Application using Java 18.0.2.1 on DESKTOP-ONPK3FH with PID 30804 (D:\Spring Boot\demo4\target\classes started by 18080 in D:\Spring Boot\demo4)
+2025-04-13 00:19:48.618 DEBUG 30804 --- [main] edu.cuit.jead.demo4.Demo4Application     : Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-04-13 00:19:48.619  INFO 30804 --- [main] edu.cuit.jead.demo4.Demo4Application     : No active profile set, falling back to 1 default profile: "default"
+2025-04-13 00:19:49.233  INFO 30804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-13 00:19:49.236  INFO 30804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-13 00:19:49.273  INFO 30804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-04-13 00:19:49.869  INFO 30804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-04-13 00:19:49.878  INFO 30804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-13 00:19:49.880  INFO 30804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-04-13 00:19:49.973  INFO 30804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-13 00:19:49.974  INFO 30804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1288 ms
+2025-04-13 00:19:50.823  INFO 30804 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-04-13 00:19:51.018  INFO 30804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-13 00:19:51.029  INFO 30804 --- [main] edu.cuit.jead.demo4.Demo4Application     : Started Demo4Application in 2.808 seconds (JVM running for 3.38)
+2025-04-13 00:20:19.093  INFO 30804 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-13 00:20:19.094  INFO 30804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-13 00:20:19.096  INFO 30804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-04-13 00:20:19.266  INFO 30804 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-13 00:20:19.871  INFO 30804 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-13 00:20:19.891 DEBUG 30804 --- [http-nio-8080-exec-1] e.c.j.d.mapper.UserMapper.selectList     : ==>  Preparing: SELECT uid,name,gender,intro,city,photo FROM user WHERE (gender = ?)
+2025-04-13 00:20:19.943 DEBUG 30804 --- [http-nio-8080-exec-1] e.c.j.d.mapper.UserMapper.selectList     : ==> Parameters: FEMALE(String)
+2025-04-13 00:20:19.993 DEBUG 30804 --- [http-nio-8080-exec-1] e.c.j.d.mapper.UserMapper.selectList     : <==      Total: 1
+2025-04-13 00:20:20.010  INFO 30804 --- [http-nio-8080-exec-1] e.c.jead.demo4.service.UserServiceImpl   : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:20:20.011  INFO 30804 --- [http-nio-8080-exec-1] e.c.j.demo4.controller.UserController    : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:21:21.304 DEBUG 30804 --- [http-nio-8080-exec-3] e.c.j.d.mapper.UserMapper.selectList     : ==>  Preparing: SELECT uid,name,gender,intro,city,photo FROM user
+2025-04-13 00:21:21.305 DEBUG 30804 --- [http-nio-8080-exec-3] e.c.j.d.mapper.UserMapper.selectList     : ==> Parameters: 
+2025-04-13 00:21:21.341 DEBUG 30804 --- [http-nio-8080-exec-3] e.c.j.d.mapper.UserMapper.selectList     : <==      Total: 2
+2025-04-13 00:21:21.343  INFO 30804 --- [http-nio-8080-exec-3] e.c.jead.demo4.service.UserServiceImpl   : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg), User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:21:21.343  INFO 30804 --- [http-nio-8080-exec-3] e.c.j.demo4.controller.UserController    : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg), User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:21:57.516 DEBUG 30804 --- [http-nio-8080-exec-7] e.c.j.d.mapper.UserMapper.selectList     : ==>  Preparing: SELECT uid,name,gender,intro,city,photo FROM user
+2025-04-13 00:21:57.518 DEBUG 30804 --- [http-nio-8080-exec-7] e.c.j.d.mapper.UserMapper.selectList     : ==> Parameters: 
+2025-04-13 00:21:57.521 DEBUG 30804 --- [http-nio-8080-exec-7] e.c.j.d.mapper.UserMapper.selectList     : <==      Total: 2
+2025-04-13 00:21:57.522  INFO 30804 --- [http-nio-8080-exec-7] e.c.jead.demo4.service.UserServiceImpl   : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg), User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:21:57.523  INFO 30804 --- [http-nio-8080-exec-7] e.c.j.demo4.controller.UserController    : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg), User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:22:15.401 DEBUG 30804 --- [http-nio-8080-exec-8] e.c.j.d.mapper.UserMapper.selectList     : ==>  Preparing: SELECT uid,name,gender,intro,city,photo FROM user
+2025-04-13 00:22:15.402 DEBUG 30804 --- [http-nio-8080-exec-8] e.c.j.d.mapper.UserMapper.selectList     : ==> Parameters: 
+2025-04-13 00:22:15.406 DEBUG 30804 --- [http-nio-8080-exec-8] e.c.j.d.mapper.UserMapper.selectList     : <==      Total: 2
+2025-04-13 00:22:15.408  INFO 30804 --- [http-nio-8080-exec-8] e.c.jead.demo4.service.UserServiceImpl   : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg), User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:22:15.410  INFO 30804 --- [http-nio-8080-exec-8] e.c.j.demo4.controller.UserController    : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg), User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:22:44.056 DEBUG 30804 --- [http-nio-8080-exec-9] e.c.j.d.mapper.UserMapper.selectList     : ==>  Preparing: SELECT uid,name,gender,intro,city,photo FROM user
+2025-04-13 00:22:44.058 DEBUG 30804 --- [http-nio-8080-exec-9] e.c.j.d.mapper.UserMapper.selectList     : ==> Parameters: 
+2025-04-13 00:22:44.063 DEBUG 30804 --- [http-nio-8080-exec-9] e.c.j.d.mapper.UserMapper.selectList     : <==      Total: 2
+2025-04-13 00:22:44.064  INFO 30804 --- [http-nio-8080-exec-9] e.c.jead.demo4.service.UserServiceImpl   : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg), User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:22:44.064  INFO 30804 --- [http-nio-8080-exec-9] e.c.j.demo4.controller.UserController    : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg), User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:23:37.106 DEBUG 30804 --- [http-nio-8080-exec-10] e.c.j.d.mapper.UserMapper.selectList     : ==>  Preparing: SELECT uid,name,gender,intro,city,photo FROM user
+2025-04-13 00:23:37.107 DEBUG 30804 --- [http-nio-8080-exec-10] e.c.j.d.mapper.UserMapper.selectList     : ==> Parameters: 
+2025-04-13 00:23:37.110 DEBUG 30804 --- [http-nio-8080-exec-10] e.c.j.d.mapper.UserMapper.selectList     : <==      Total: 2
+2025-04-13 00:23:37.111  INFO 30804 --- [http-nio-8080-exec-10] e.c.jead.demo4.service.UserServiceImpl   : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg), User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:23:37.112  INFO 30804 --- [http-nio-8080-exec-10] e.c.j.demo4.controller.UserController    : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg), User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:24:13.739 DEBUG 30804 --- [http-nio-8080-exec-5] e.c.j.d.mapper.UserMapper.selectList     : ==>  Preparing: SELECT uid,name,gender,intro,city,photo FROM user
+2025-04-13 00:24:13.740 DEBUG 30804 --- [http-nio-8080-exec-5] e.c.j.d.mapper.UserMapper.selectList     : ==> Parameters: 
+2025-04-13 00:24:13.743 DEBUG 30804 --- [http-nio-8080-exec-5] e.c.j.d.mapper.UserMapper.selectList     : <==      Total: 2
+2025-04-13 00:24:13.744  INFO 30804 --- [http-nio-8080-exec-5] e.c.jead.demo4.service.UserServiceImpl   : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg), User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:24:13.744  INFO 30804 --- [http-nio-8080-exec-5] e.c.j.demo4.controller.UserController    : Retrieved all users: [User(uid=7, name=Miku, gender=FEMALE, intro=Miku~, city=TOKEYO, photo=/upload/20240330_003824.jpg), User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)]
+2025-04-13 00:24:40.950 DEBUG 30804 --- [http-nio-8080-exec-1] e.c.j.d.mapper.UserMapper.selectById     : ==>  Preparing: SELECT uid,name,gender,intro,city,photo FROM user WHERE uid=?
+2025-04-13 00:24:40.956 DEBUG 30804 --- [http-nio-8080-exec-1] e.c.j.d.mapper.UserMapper.selectById     : ==> Parameters: 8(Long)
+2025-04-13 00:24:40.962 DEBUG 30804 --- [http-nio-8080-exec-1] e.c.j.d.mapper.UserMapper.selectById     : <==      Total: 1
+2025-04-13 00:24:40.968  INFO 30804 --- [http-nio-8080-exec-1] e.c.jead.demo4.service.UserServiceImpl   : Retrieved user by ID 8: User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)
+2025-04-13 00:24:41.414  INFO 30804 --- [http-nio-8080-exec-1] e.c.j.demo4.controller.UserController    : Retrieved user by ID 8: User(uid=8, name=John Doe, gender=MALE, intro=JD, city=BEIJING, photo=/upload/20240330_003824.jpg)
+2025-04-13 00:27:02.343  INFO 30804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-13 00:27:02.359  INFO 30804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
