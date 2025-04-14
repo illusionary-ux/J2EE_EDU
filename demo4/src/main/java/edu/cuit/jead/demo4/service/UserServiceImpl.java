@@ -5,6 +5,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import edu.cuit.jead.demo4.entity.User;
 import edu.cuit.jead.demo4.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
@@ -33,7 +36,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Autowired
     private RedisUserService redisUserService;
 
-
+    @CachePut(value = "users",key = "#user.uid")
     @Override
     public String saveUserWithPhoto(User user, MultipartFile file) throws Exception {
         if (file.isEmpty() || file.getOriginalFilename() == null || file.getOriginalFilename().isEmpty()) {
@@ -69,6 +72,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
     }
 
+    @CachePut(value = "users", key = "#user.uid")
     @Override
     public String updateUserWithPhoto(User user, MultipartFile file) throws Exception {
         // 验证文件是否为空
@@ -117,6 +121,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
+    @CacheEvict(value = "users", key = "#uid")
     public String deleteUserWithPhoto(Long uid) throws Exception {
         // 1. 查找用户
         User user = userMapper.selectById(uid);
@@ -157,6 +162,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
+    @Cacheable(value = "users", key = "#uid")
     public User getUserById(Long uid) {
         User cachedUser = redisUserService.quickSearchById(uid);
         if (cachedUser != null) {

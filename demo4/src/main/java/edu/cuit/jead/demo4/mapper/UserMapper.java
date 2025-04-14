@@ -12,5 +12,4 @@ import java.util.Map;
 public interface UserMapper extends BaseMapper<User> {
 
 }
-
-// 使用MyBatis-Plus的BaseMapper接口继承通用CRUD方法，并扩展自定义查询方法
+// 使用MyBatis-Plus的BaseMapper接口继承通用CRUD方法

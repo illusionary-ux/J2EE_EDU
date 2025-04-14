@@ -17,4 +17,5 @@ public class User implements Serializable {
     private String intro; // 简介
     private String city; // 城市
     private String photo; // 头像路径
+
 }
